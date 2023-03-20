@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
  * main - prints a line to the standard error
  *
@@ -8,6 +8,6 @@
 
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	write("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }
