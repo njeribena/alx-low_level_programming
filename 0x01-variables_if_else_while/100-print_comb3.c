@@ -10,19 +10,29 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; i < 10; i++)
-	{
-		for (j = i + 1; j < 10; j++)
-		{
-			putchar(i + '0');
-			putchar(j + '0');
+	i = 48;
+	j = 48;
 
-			if (i < 8)
+	while (i < 58)
+	{
+		j = i + 1;
+		while (j < 58)
+		{
+			putchar(i);
+			putchar(j);
+
+			if (i < 56 || j < 57)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(44);
+				putchar(32);
 			}
+			j++;
 		}
+
+		i++;
 	}
+
+	putchar(10);
+
 	return (0);
 }
