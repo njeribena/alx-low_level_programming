@@ -1,8 +1,14 @@
 #include <stdio.h>
 
+/**
+ * main - prints a line to the standard error
+ *
+ * Return: 1 (success)
+ */
+
 int main(void)
 {
-	putchar("and that piece of art is useful" - Dora Korpar, 2015-10-19");
+	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 	putchar('\n');
 	return (0);
 }
