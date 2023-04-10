@@ -2,37 +2,31 @@
 #include <stdlib.h>
 
 /**
- * main - Entry Point
- * @argc: Argument Count
- * @argv: Argument Vector
- * Return: Always Zero (Success)
- */
+*main - program that adds positive numbers
+*@argc: Argument counter
+*@argv: Argument vector
+*Return: 1 if number contains non-digits, otherwise 0
+*/
 
 int main(int argc, char *argv[])
 {
-	int j, sum;
+	int k, b, sum = 0;
 
-	sum = 0;
-
-	if (argc <= 1)
+	for (k = 1; k < argc; k++)
 	{
-		printf("0\n");
-		return (0);
-	}
-	for (j = 1; j < argc; j++)
-	{
-		if (atoi(argv[j]) == 0)
+		for (b = 0; argv[k][b] != '\0'; b++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[k][b] < '0' || argv[k][b] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+
+		sum += atoi(argv[k]);
 	}
-	for (j = 1; j < argc; j++)
-	{
-		sum += (atoi(argv[j]));
-	}
+
 	printf("%d\n", sum);
 
 	return (0);
 }
-
