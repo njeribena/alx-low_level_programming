@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "variadic_functions.h"
 #include <stdarg.h>
 
@@ -8,7 +7,7 @@
  * @...: A variable number of paramters to calculate the sum of.
  *
  * Return: If n is 0 the return 0
- *         or else return the sum of all parameters.
+ *         or return the sum of all parameters.
  */
 
 int sum_them_all(const unsigned int n, ...)
