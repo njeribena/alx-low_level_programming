@@ -7,7 +7,7 @@
  * print_strings - Prints strings
  *		Followed by a new line
  * @separator: separates the strings
- * @n: Number of strings 
+ * @n: Number of strings
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
