@@ -1,23 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * pop_listint - deleting the head node of a linked list
- * @head: pointer to the first element
- *
- * Return: the data within the element that was deleted,
- * or 0 if list is empty
+ * sum_listint - Returns sum of all the data
+ * @head: Pointer to the head of the listint_t
+ * Return: Sum of all n
  */
-int pop_listint(listint_t **head)
-{
-	listint_t *tmp;
-	int num;
 
-	if (!head || !*head)
-		return (0);
-	num = (*head)->n;
-	tmp = (*head)->next;
-	free(*head);
-	*head = tmp;
-	return (num);
+int sum_listint(listint_t *head)
+{
+	int sum = 0;
+
+	while (head)
+	{
+		sum = sum + (head->n);
+		head = head->next;
+	}
+	return (sum);
 }
