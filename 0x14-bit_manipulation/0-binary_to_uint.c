@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (sum);
 
-	/* find string length */
+	/* find length of string */
 	while (b[len] != '\0')
 		len++;
 	len -= 1;
